@@ -28,6 +28,7 @@ export GOPATH=$HOME/go
 # ALIASES
 #———————————————————————————————————————————————————————————————————————————————
 alias vim="/usr/local/bin/vim"
+alias git=hub # Uses Hub for extra GitHub features
 alias dt="cd ~/Desktop"
 alias swat="ssh onewman1@lab.cs.swarthmore.edu"
 alias safari="open"
