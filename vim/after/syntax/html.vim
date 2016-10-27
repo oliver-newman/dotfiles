@@ -8,3 +8,8 @@ syn match htmlLinkText contained contains=@Spell,htmlTag,htmlEndTag,htmlSpecialC
 
 " enable the new syntax
 hi def link htmlLinkText                Underlined
+
+" for HTML, generally format text, but if a long line has been created leave
+" it alone when editing
+set formatoptions+=tl
+"
