@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/Oliver/workspace/oliver-newman.github.io/other'
 let g:netrw_dirhist_2='/Users/Oliver/workspace/strava_3d_profile/node_modules/strava-v3'
 let g:netrw_dirhist_3='/Users/Oliver/workspace/toy_app/app/views/users'
 let g:netrw_dirhist_4='/Users/Oliver/dotfiles'
 let g:netrw_dirhist_5='/home/18/onewman1/dotfiles/.git'
+let g:netrw_dirhist_6='/Users/Oliver/dotfiles/vim/bundle/vim-javascript'
