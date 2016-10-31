@@ -20,7 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 " instead of Plugin)
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-haml'
