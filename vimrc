@@ -33,6 +33,11 @@ Plugin 'digitaltoad/vim-pug'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" syntastic syntax checkers
+let g:syntastic_python_checkers=['python']
+let g:syntastic_c_checkers=[]
+let g:syntastic_cpp_checkers=[]
+
 
 " colorscheme
 set term=screen-256color
