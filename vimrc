@@ -40,6 +40,7 @@ let g:syntastic_cpp_checkers=[]
 
 " nerdcommenter space after comment delimiter
 let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {'python': {'left': '#'}}
 
 
 " colorscheme
