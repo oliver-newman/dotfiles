@@ -38,6 +38,9 @@ let g:syntastic_python_checkers=['python']
 let g:syntastic_c_checkers=[]
 let g:syntastic_cpp_checkers=[]
 
+" nerdcommenter space after comment delimiter
+let g:NERDSpaceDelims = 1
+
 
 " colorscheme
 set term=screen-256color
