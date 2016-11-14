@@ -9,6 +9,8 @@ for file in ~/.{path,bash_aliases}; do
 done
 unset file;
 
+export EDITOR=vim
+
 # Setting path for Go workspace
 export GOPATH=$HOME/go
 
