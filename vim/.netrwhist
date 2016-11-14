@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/Oliver/workspace/swat-gpa-calc/gpa_calc/static/css'
-let g:netrw_dirhist_2='/Users/Oliver/workspace/team-thrive/app/views'
-let g:netrw_dirhist_3='/Users/Oliver/workspace/team-thrive/app/views/layouts'
-let g:netrw_dirhist_4='/Users/Oliver/workspace/team-thrive/app/views/static_pages'
-let g:netrw_dirhist_5='/Users/Oliver/sccs/new-home'
-let g:netrw_dirhist_6='/Users/Oliver/workspace/oliver-newman.github.io/_includes'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core'
+let g:netrw_dirhist_2='/usr/local/Cellar/aview'
+let g:netrw_dirhist_3='/usr/local/Cellar/aview/1.3.0rc1'
+let g:netrw_dirhist_4='/usr/local/Cellar/aview/1.3.0rc1/share'
+let g:netrw_dirhist_5='/usr/local/Cellar/aview/1.3.0rc1/share/man'
+let g:netrw_dirhist_6='/usr/local/Cellar/aview/1.3.0rc1/share/man/man1'
+let g:netrw_dirhist_7='/usr/local/Cellar/aview/1.3.0rc1/bin'
