@@ -20,7 +20,7 @@ export GEM_PATH=$HOME/.gem
 
 # Terminal coloring
 export CLICOLOR=1
-export LS_COLORS='rs=0:di=01;36:ln=01;35:mh=00:pi=40;33:ex=01;31'
+export LS_COLORS='rs=0:di=1;36:ln=1;35:mh=0:pi=40;33:ex=1;31'
 
 # ALIASES
 #———————————————————————————————————————————————————————————————————————————————

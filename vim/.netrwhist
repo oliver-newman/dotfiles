@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core'
-let g:netrw_dirhist_2='/usr/local/Cellar/aview'
-let g:netrw_dirhist_3='/usr/local/Cellar/aview/1.3.0rc1'
-let g:netrw_dirhist_4='/usr/local/Cellar/aview/1.3.0rc1/share'
-let g:netrw_dirhist_5='/usr/local/Cellar/aview/1.3.0rc1/share/man'
-let g:netrw_dirhist_6='/usr/local/Cellar/aview/1.3.0rc1/share/man/man1'
-let g:netrw_dirhist_7='/usr/local/Cellar/aview/1.3.0rc1/bin'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/private/etc'
