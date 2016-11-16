@@ -39,6 +39,3 @@ alias python="python3"
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
 export PS2="more\[\033[0;36m\]>"
-
-# Load RVM into a shell session as a function
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
