@@ -2,19 +2,25 @@
 shopt -s expand_aliases
 
 # Source external config files
-for file in ~/.{path,bash_aliases}; do
+for file in ~/.{bash_aliases,path,profile}; do
   if [ -r "$file" ] && [ -f "$file" ]; then # If file exists and is readable
     source "$file";
   fi
 done
 unset file;
 
+export EDITOR=vim
+
 # Setting path for Go workspace
 export GOPATH=$HOME/go
 
+# Gem paths
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+
 # Terminal coloring
 export CLICOLOR=1
-export LS_COLORS='rs=0:di=01;36:ln=01;35:mh=00:pi=40;33:ex=01;31'
+export LS_COLORS='rs=0:di=1;36:ln=1;35:mh=0:pi=40;33:ex=1;31'
 
 # ALIASES
 #———————————————————————————————————————————————————————————————————————————————
@@ -34,3 +40,5 @@ alias python="python3"
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
 export PS2="more\[\033[0;36m\]>"
 
+# Load RVM into a shell session as a function
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
