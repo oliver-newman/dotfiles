@@ -88,8 +88,13 @@ nnoremap j gj
 " enable folding with the spacebar
 nnoremap <space> za
 
+" let Ctrl-I instead of Ctrl-A do incrementation; Ctrl-A was causing many
+" accidental changes to do overlap with tmux prefix
+nnoremap <c-i> <c-a>
+nnoremap <c-a> <Esc>
+
 " make backspace work like most other apps
 set backspace=indent,eol,start
 
-" allow 'incrementing' of letters with Ctrl-A
+" allow 'incrementing' of letters with Ctrl-I
 set nf=octal,hex,alpha
