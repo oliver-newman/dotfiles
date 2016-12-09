@@ -28,6 +28,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-liquid'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'tikhomirov/vim-glsl'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,8 +86,9 @@ inoremap jk <Esc>
 nnoremap k gk
 nnoremap j gj
 
-" enable folding with the spacebar
-nnoremap <space> za
+" enable paging up and down using space and shift-space
+nnoremap <space> <c-d>
+nnoremap <s-space> <c-u>
 
 " let Ctrl-I instead of Ctrl-A do incrementation; Ctrl-A was causing many
 " accidental changes to do overlap with tmux prefix
