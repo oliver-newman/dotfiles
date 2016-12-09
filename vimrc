@@ -2,7 +2,8 @@
 " vimrc
 " Author: Oliver Newman (with input from many, many sources)
 "-------------------------------------------------------------------------------
-" Vundle stuff
+" Plugin (vundle) stuff
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -39,10 +40,20 @@ let g:syntastic_python_checkers=['python']
 let g:syntastic_c_checkers=[]
 let g:syntastic_cpp_checkers=[]
 
+" disable annoying warning in erb files
+let g:syntastic_eruby_ruby_quiet_messages=
+        \ {'regex': 'possibly useless use of a variable in void context'}
+
 " nerdcommenter space after comment delimiter
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#'}}
 
+"-------------------------------------------------------------------------------
+" Appearance
+
+" display the current mode and partially-typed commands in the status line
+set showmode
+set showcmd
 
 " colorscheme
 set term=screen-256color
@@ -58,13 +69,11 @@ highlight colorcolumn ctermbg=235 guibg=#2c2d27
 " highlight all columns of lines beyond 80 characters
 let &colorcolumn="81,".join(range(81,81),",")
 
+"-------------------------------------------------------------------------------
+" Behavior
 
 " automatically copy to system clipboard
 set clipboard=unnamed
-
-" display the current mode and partially-typed commands in the status line
-set showmode
-set showcmd
 
 " use indents of 2 spaces, and have them copied down lines:
 set shiftwidth=2
@@ -78,6 +87,8 @@ set autoindent
 set ignorecase
 set smartcase
 
+"-------------------------------------------------------------------------------
+" Keyboard stuff
 
 " let jk exit from insert mode
 inoremap jk <Esc>
@@ -100,3 +111,5 @@ set backspace=indent,eol,start
 
 " allow 'incrementing' of letters with Ctrl-I
 set nf=octal,hex,alpha
+
+"-------------------------------------------------------------------------------

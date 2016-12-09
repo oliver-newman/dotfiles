@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/private/etc'
-let g:netrw_dirhist_2='/usr/local/Homebrew/Library'
-let g:netrw_dirhist_3='/usr/local/Homebrew/Library/Taps'
-let g:netrw_dirhist_4='/usr/local/Homebrew/Library/Taps/homebrew'
-let g:netrw_dirhist_5='/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core'
-let g:netrw_dirhist_6='/home/onewman1/dotfiles/vim/after/ftplugin'
-let g:netrw_dirhist_7='/home/newhall/public/cs44/movieDB'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/Oliver/workspace/team-thrive/app/assets/stylesheets'

@@ -2,7 +2,7 @@
 shopt -s expand_aliases
 
 # Source external config files
-for file in ~/.{bash_aliases,path,profile}; do
+for file in ~/.{bash_aliases,path}; do
   if [ -r "$file" ] && [ -f "$file" ]; then # If file exists and is readable
     source "$file";
   fi
