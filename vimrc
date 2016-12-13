@@ -30,6 +30,8 @@ Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-liquid'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'vimwiki/vimwiki'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
