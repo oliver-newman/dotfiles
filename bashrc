@@ -36,6 +36,7 @@ alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias pdflatex="pdflatex -interaction=batchmode"
 alias tmux-source="tmux source-file ~/.tmux.conf"
 alias python="python3"
+eval "$(thefuck --alias)"
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
