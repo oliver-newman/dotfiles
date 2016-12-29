@@ -36,6 +36,7 @@ alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias pdflatex="pdflatex -interaction=batchmode"
 alias tmux-source="tmux source-file ~/.tmux.conf"
 alias python="python3"
+alias pip="pip3"
 eval "$(thefuck --alias)"
 #———————————————————————————————————————————————————————————————————————————————
 
