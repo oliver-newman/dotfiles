@@ -90,6 +90,9 @@ set autoindent
 set ignorecase
 set smartcase
 
+" spell-checking for .md files
+autocmd FileType markdown set spell spelllang=en_us
+
 "-------------------------------------------------------------------------------
 " Keyboard stuff
 
