@@ -9,6 +9,9 @@ for file in ~/.{bash_aliases,path}; do
 done
 unset file;
 
+# For Python autoenv
+source `which activate.sh`
+
 export EDITOR=vim
 
 # Setting path for Go workspace
@@ -31,12 +34,13 @@ alias lal="ls -Al"
 alias grep="grep --color=always"
 alias python="python3"
 alias pip="pip3"
+alias ipaddr="lynx -dump http://www.whatismyip.org"
 alias pdflatex="pdflatex -interaction=batchmode"
 alias tmux-source="tmux source-file ~/.tmux.conf"
 alias swat="ssh onewman1@lab.cs.swarthmore.edu"
 alias heron="ssh onewman1@heron.sccs.swarthmore.edu"
 alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
-alias ed="ssh s1689884@schiff.inf.ed.ac.uk -t 'ssh student.login -t \"tmux new-session\" '"
+alias ed="ssh -X s1689884@schiff.inf.ed.ac.uk -t 'ssh -X student.login -t \"tmux new-session\" '"
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
