@@ -111,6 +111,9 @@ nnoremap <space> za
 nnoremap <c-i> <c-a>
 nnoremap <c-a> <Esc>
 
+" let Ctrl-L clear highlights from last search
+nnoremap <C-L> :nohlsearch<CR><C-L>
+
 " make backspace work like most other apps
 set backspace=indent,eol,start
 
