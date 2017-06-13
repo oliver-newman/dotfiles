@@ -124,3 +124,25 @@ set backspace=indent,eol,start
 set nf=octal,hex,alpha
 
 "-------------------------------------------------------------------------------
+" EasyMotion
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" <Leader>s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Use EasyMotion for normal search
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+"-------------------------------------------------------------------------------
