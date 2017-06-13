@@ -33,6 +33,7 @@ Plugin 'tikhomirov/vim-glsl'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,7 +77,9 @@ let &colorcolumn="81,".join(range(81,81),",")
 " Behavior
 
 " automatically copy to system clipboard
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard=unnamed
+endif
 
 " use indents of 2 spaces, and have them copied down lines:
 set shiftwidth=2
