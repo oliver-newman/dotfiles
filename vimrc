@@ -119,7 +119,7 @@ nnoremap j gj
 nnoremap <space> za
 
 " let Ctrl-I instead of Ctrl-A do incrementation; Ctrl-A was causing many
-" accidental changes to do overlap with tmux prefix
+" accidental changes due to overlap with tmux prefix
 nnoremap <c-i> <c-a>
 nnoremap <c-a> <Esc>
 
