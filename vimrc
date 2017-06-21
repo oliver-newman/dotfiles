@@ -44,8 +44,19 @@ let g:syntastic_python_checkers=['python']
 let g:syntastic_c_checkers=[]
 let g:syntastic_cpp_checkers=[]
 
+" Python version switching for syntastic
+function Py2()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
+endfunction
+
+function Py3()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+endfunction
+
+call Py3() " default to Python 3
+
 " disable annoying warning in erb files
-let g:syntastic_eruby_ruby_quiet_messages=
+let g:syntastic_eruby_ruby_quiet_messages =
         \ {'regex': 'possibly useless use of a variable in void context'}
 
 " nerdcommenter space after comment delimiter
@@ -77,9 +88,7 @@ let &colorcolumn="81,".join(range(81,81),",")
 " Behavior
 
 " automatically copy to system clipboard
-if $TMUX == ''
-  set clipboard=unnamed
-endif
+set clipboard=unnamed
 
 " use indents of 2 spaces, and have them copied down lines:
 set shiftwidth=2
