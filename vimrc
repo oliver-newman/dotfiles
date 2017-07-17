@@ -32,6 +32,8 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
+Plugin 'dahu/vim-fanfingtastic'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -42,8 +44,19 @@ let g:syntastic_python_checkers=['python']
 let g:syntastic_c_checkers=[]
 let g:syntastic_cpp_checkers=[]
 
+" Python version switching for syntastic
+function Py2()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
+endfunction
+
+function Py3()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+endfunction
+
+call Py3() " default to Python 3
+
 " disable annoying warning in erb files
-let g:syntastic_eruby_ruby_quiet_messages=
+let g:syntastic_eruby_ruby_quiet_messages =
         \ {'regex': 'possibly useless use of a variable in void context'}
 
 " nerdcommenter space after comment delimiter
@@ -89,6 +102,9 @@ set autoindent
 set ignorecase
 set smartcase
 
+" spell-checking for .md files
+autocmd FileType markdown set spell spelllang=en_us
+
 "-------------------------------------------------------------------------------
 " Keyboard stuff
 
@@ -99,19 +115,43 @@ inoremap jk <Esc>
 nnoremap k gk
 nnoremap j gj
 
-" enable paging up and down using space and shift-space
-nnoremap <space> <c-d>
-nnoremap <s-space> <c-u>
+" enable folding/unfolding with space
+nnoremap <space> za
 
 " let Ctrl-I instead of Ctrl-A do incrementation; Ctrl-A was causing many
-" accidental changes to do overlap with tmux prefix
+" accidental changes due to overlap with tmux prefix
 nnoremap <c-i> <c-a>
 nnoremap <c-a> <Esc>
+
+" let Ctrl-L clear highlights from last search
+nnoremap <C-L> :nohlsearch<CR><C-L>
 
 " make backspace work like most other apps
 set backspace=indent,eol,start
 
 " allow 'incrementing' of letters with Ctrl-I
 set nf=octal,hex,alpha
+
+"-------------------------------------------------------------------------------
+" EasyMotion
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" <Leader>s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Use EasyMotion for normal search
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
 
 "-------------------------------------------------------------------------------
