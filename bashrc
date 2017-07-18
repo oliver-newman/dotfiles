@@ -21,6 +21,11 @@ export GOPATH=$HOME/go
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
 
+# git auto-completion script
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 # Terminal coloring
 export CLICOLOR=1
 export LS_COLORS='rs=0:di=1;36:ln=1;35:mh=0:pi=40;33:ex=1;31'
