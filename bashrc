@@ -9,6 +9,13 @@ for file in ~/.{bash_aliases,path}; do
 done
 unset file;
 
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+else
+  echo -e "\033[91bash_completion not installed\033[0m"
+fi
+
 # For Python autoenv
 source `which activate.sh`
 
@@ -20,11 +27,6 @@ export GOPATH=$HOME/go
 # Gem paths
 export GEM_HOME=$HOME/.gem
 export GEM_PATH=$HOME/.gem
-
-# git auto-completion script
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
 
 # Terminal coloring
 export CLICOLOR=1
