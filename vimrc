@@ -39,15 +39,14 @@ Plugin 'easymotion/vim-easymotion'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" syntastic base settings
-autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
-nmap <Leader>s :SyntasticCheck<CR><C-L>
-nmap <Leader>sh :SyntasticReset<CR><C-L>
-
 " syntastic syntax checkers
-let g:syntastic_python_checkers = ['python', 'pylint']
+let g:syntastic_python_checkers = ['python']
 let g:syntastic_c_checkers = []
 let g:syntastic_cpp_checkers = []
+
+" syntastic shortcuts
+cabbrev sh SyntasticReset
+cabbrev pl SyntasticCheck pylint
 
 " Python version switching for syntastic
 function Py2()
@@ -70,6 +69,8 @@ let g:NERDCustomDelimiters = {'python': {'left': '#'}}
 
 "-------------------------------------------------------------------------------
 " Appearance
+
+set lazyredraw
 
 " display the current mode and partially-typed commands in the status line
 set showmode
