@@ -45,8 +45,8 @@ let g:syntastic_c_checkers = []
 let g:syntastic_cpp_checkers = []
 
 " syntastic shortcuts
-cabbrev sh SyntasticReset
-cabbrev pl SyntasticCheck pylint
+cabbrev sr SyntasticReset
+cabbrev spl SyntasticCheck pylint
 
 " Python version switching for syntastic
 function Py2()
