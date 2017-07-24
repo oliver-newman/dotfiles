@@ -39,10 +39,15 @@ Plugin 'easymotion/vim-easymotion'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" syntastic base settings
+autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
+nmap <Leader>s :SyntasticCheck<CR><C-L>
+nmap <Leader>sh :SyntasticReset<CR><C-L>
+
 " syntastic syntax checkers
-let g:syntastic_python_checkers=['python']
-let g:syntastic_c_checkers=[]
-let g:syntastic_cpp_checkers=[]
+let g:syntastic_python_checkers = ['python', 'pylint']
+let g:syntastic_c_checkers = []
+let g:syntastic_cpp_checkers = []
 
 " Python version switching for syntastic
 function Py2()
@@ -82,7 +87,7 @@ set numberwidth=1
 " highlight 81st character of lines
 highlight colorcolumn ctermbg=235 guibg=#2c2d27
 " highlight all columns of lines beyond 80 characters
-let &colorcolumn="81,".join(range(81,81),",")
+let &colorcolumn = "81,".join(range(81,81),",")
 
 "-------------------------------------------------------------------------------
 " Behavior
@@ -103,7 +108,7 @@ set ignorecase
 set smartcase
 
 " spell-checking for .md files
-autocmd FileType markdown set spell spelllang=en_us
+autocmd FileType markdown set spell spelllang = en_us
 
 "-------------------------------------------------------------------------------
 " Keyboard stuff
@@ -138,9 +143,6 @@ set nf=octal,hex,alpha
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" <Leader>s{char}{char} to move to {char}{char}
-nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
 " Move to line
 map <Leader>L <Plug>(easymotion-bd-jk)
