@@ -15,8 +15,6 @@ unset file;
 # bash completion
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
   source /usr/local/share/bash-completion/bash_completion
-else
-  echo -e "\033[91bash_completion not installed\033[0m"
 fi
 
 export EDITOR=vim
