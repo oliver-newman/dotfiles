@@ -1,6 +1,9 @@
 # Expand aliases within here (and in all bash scripts)
 shopt -s expand_aliases
 
+# Check if dotfiles are out of date
+./check-dotfiles-modified.sh
+
 # Source external config files
 for file in ~/.{bash_aliases}; do
   if [ -e "$file" ] && [ -f "$file" ]; then # If file exists and is readable
@@ -10,8 +13,8 @@ done
 unset file;
 
 # bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  source /usr/local/share/bash-completion/bash_completion
 else
   echo -e "\033[91bash_completion not installed\033[0m"
 fi
