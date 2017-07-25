@@ -46,8 +46,6 @@ brew install reattach-to-user-namespace
 
 # Install font tools.
 brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install other useful binaries.

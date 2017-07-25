@@ -2,8 +2,8 @@
 shopt -s expand_aliases
 
 # Source external config files
-for file in ~/.{bash_aliases,path}; do
-  if [ -r "$file" ] && [ -f "$file" ]; then # If file exists and is readable
+for file in ~/.{bash_aliases}; do
+  if [ -e "$file" ] && [ -f "$file" ]; then # If file exists and is readable
     source "$file";
   fi
 done
@@ -15,9 +15,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 else
   echo -e "\033[91bash_completion not installed\033[0m"
 fi
-
-# For Python autoenv
-source `which activate.sh`
 
 export EDITOR=vim
 
@@ -49,6 +46,7 @@ alias swat="ssh onewman1@lab.cs.swarthmore.edu"
 alias heron="ssh onewman1@heron.sccs.swarthmore.edu"
 alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias ed="ssh -X s1689884@bruegel.inf.ed.ac.uk -t 'ssh -X student.login -t \"tmux new-session\" '"
+eval $(thefuck --alias)
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
