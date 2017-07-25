@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 # Quick script to warn me if my dotfiles GitHub repo has been updated since I
 # last pulled from it.
 

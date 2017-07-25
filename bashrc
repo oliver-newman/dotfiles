@@ -2,7 +2,7 @@
 shopt -s expand_aliases
 
 # Check if dotfiles are out of date
-./check-dotfiles-modified.sh
+$HOME/dotfiles/check-dotfiles-modified.sh
 
 # Source external config files
 for file in ~/.{bash_aliases}; do
@@ -13,9 +13,11 @@ done
 unset file;
 
 # bash completion
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-  source /usr/local/share/bash-completion/bash_completion
-fi
+if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+  source "$(brew --prefix)/share/bash-completion/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion;
+fi;
 
 export EDITOR=vim
 
@@ -47,7 +49,8 @@ alias swat="ssh onewman1@lab.cs.swarthmore.edu"
 alias heron="ssh onewman1@heron.sccs.swarthmore.edu"
 alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias ed="ssh -X s1689884@bruegel.inf.ed.ac.uk -t 'ssh -X student.login -t \"tmux new-session\" '"
-eval $(thefuck --alias)
+# if [ `which thefuck` ]; then $(thefuck --alias); fi;
+thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias)
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
