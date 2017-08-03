@@ -24,9 +24,10 @@ export EDITOR=vim
 # Setting path for Go workspace
 export GOPATH=$HOME/go
 
-# Gem paths
-export GEM_HOME=$HOME/.gem
-export GEM_PATH=$HOME/.gem
+# rvm
+if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+  source $HOME/.rvm/scripts/rvm;
+fi
 
 # Terminal coloring
 export CLICOLOR=1
