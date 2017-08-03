@@ -37,7 +37,7 @@ export LS_COLORS='rs=0:di=1;36:ln=1;35:mh=0:pi=40;33:ex=1;31'
 #———————————————————————————————————————————————————————————————————————————————
 alias ls="ls -F"
 alias la="ls -A"
-alias ll="ls -l"
+alias ll="ls -lh"
 alias lal="ls -Al"
 alias grep="grep --color=always"
 alias python="python3"
