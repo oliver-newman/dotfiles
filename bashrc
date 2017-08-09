@@ -19,7 +19,11 @@ elif [ -f /etc/bash_completion ]; then
   source /etc/bash_completion;
 fi;
 
+# Use vim as default editor
 export EDITOR=vim
+
+# Don't create Python *.pyc files or __pycache__
+export PYTHONDONTWRITEBYTECODE=1
 
 # Setting path for Go workspace
 export GOPATH=$HOME/go
