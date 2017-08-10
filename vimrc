@@ -34,6 +34,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,6 +67,10 @@ let g:syntastic_eruby_ruby_quiet_messages =
 " nerdcommenter space after comment delimiter
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#'}}
+
+" update gitgutter in (almost) real time
+let g:gitgutter_realtime = 1
+set updatetime=250
 
 "-------------------------------------------------------------------------------
 " Appearance
