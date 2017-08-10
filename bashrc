@@ -6,16 +6,16 @@ $HOME/dotfiles/check-dotfiles-modified.sh
 
 # Source external config files
 for file in ~/.{bash_aliases}; do
-  if [ -e "$file" ] && [ -f "$file" ]; then # If file exists and is readable
+  if [[ -e "$file" ]] && [[ -f "$file" ]]; then # If file exists and is readable
     source "$file";
   fi
 done
 unset file;
 
 # bash completion
-if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+if which brew > /dev/null && [[ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]]; then
   source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f /etc/bash_completion ]; then
+elif [[ -f "/etc/bash_completion" ]]; then
   source /etc/bash_completion;
 fi;
 
@@ -29,7 +29,7 @@ export PYTHONDONTWRITEBYTECODE=1
 export GOPATH=$HOME/go
 
 # rvm
-if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
   source $HOME/.rvm/scripts/rvm;
 fi
 
@@ -54,7 +54,7 @@ alias swat="ssh onewman1@lab.cs.swarthmore.edu"
 alias heron="ssh onewman1@heron.sccs.swarthmore.edu"
 alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias ed="ssh -X s1689884@bruegel.inf.ed.ac.uk -t 'ssh -X student.login -t \"tmux new-session\" '"
-# if [ `which thefuck` ]; then $(thefuck --alias); fi;
+# alias thefuck, if it is installed
 thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias)
 #———————————————————————————————————————————————————————————————————————————————
 
