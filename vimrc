@@ -68,8 +68,13 @@ let g:syntastic_eruby_ruby_quiet_messages =
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = {'python': {'left': '#'}}
 
+" gitgutter key mappings
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterUndoHunk
+
 " update gitgutter in (almost) real time
 let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
 set updatetime=250
 
 "-------------------------------------------------------------------------------
