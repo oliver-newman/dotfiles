@@ -56,6 +56,9 @@ alias gwaihir="ssh s-onewman1@gwaihir.sccs.swarthmore.edu"
 alias ed="ssh -X s1689884@bruegel.inf.ed.ac.uk -t 'ssh -X student.login -t \"tmux new-session\" '"
 # alias thefuck, if it is installed
 thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias)
+# source: https://stackoverflow.com/questions/2421011/output-of-git-branch-in-tree-like-fashion
+git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
+
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
