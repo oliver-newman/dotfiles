@@ -1,1 +1,38 @@
-source ~/.vimrc
+"-------------------------------------------------------------------------------
+" ideavimrc
+" Author: Oliver Newman (with input from many, many sources)
+"-------------------------------------------------------------------------------
+
+" syntax highlighting for code snippet in markdown
+let g:markdown_fenced_languages = ['java', 'c', 'html', 'python', 'bash=sh']
+
+" automatically copy to system clipboard
+set clipboard=unnamed
+
+" makes searches case-insensitive, unless they contain upper-case letters
+set ignorecase
+set smartcase
+
+" spell-checking for .md files
+autocmd FileType markdown set spell spelllang=en_us
+
+"-------------------------------------------------------------------------------
+" Keyboard stuff
+
+" let jk exit from insert mode
+inoremap jk <Esc>
+
+" up and down moves go through wrapped lines, instead of skipping them
+nnoremap k gk
+nnoremap j gj
+
+" let Ctrl-L clear highlights from last search
+nnoremap <C-L> :nohlsearch<CR><C-L>
+
+" make backspace work like most other apps
+set backspace=indent,eol,start
+
+" allow 'incrementing' of letters with Ctrl-I
+set nf=octal,hex,alpha
+
+"-------------------------------------------------------------------------------

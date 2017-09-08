@@ -41,6 +41,7 @@ Plugin 'valloric/youcompleteme'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" syntax highlighting for code snippet in markdown
 let g:markdown_fenced_languages = ['java', 'c', 'html', 'python', 'bash=sh']
 
 " syntastic syntax checkers
