@@ -64,6 +64,9 @@ endfunction
 
 call Py3() " default to Python 3
 
+" automatically close ycm function preview window after leaving insert mode
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 " disable annoying warning in erb files
 let g:syntastic_eruby_ruby_quiet_messages =
         \ {'regex': 'possibly useless use of a variable in void context'}

@@ -59,6 +59,27 @@ thefuck -v >/dev/null 2>&1 && eval $(thefuck --alias)
 # source: https://stackoverflow.com/questions/2421011/output-of-git-branch-in-tree-like-fashion
 git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches"
 
+# Discourage git commit -a option
+# Source: https://stackoverflow.com/a/22160650/6740397
+git() {
+  for arg
+  do
+    if [[ $arg == -a* || $arg == -[^-]*a* ]]
+    then
+      annoy_me
+      return 1
+    fi
+  done
+  command git "$@"
+}
+annoy_me() { 
+  echo "Stop using -a, $USER!" 
+  echo "You are now in time out."
+  settings=$(stty -g)        
+  stty raw
+  sleep 15
+  stty "$settings"
+}
 #———————————————————————————————————————————————————————————————————————————————
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
