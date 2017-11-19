@@ -35,6 +35,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -22,6 +22,11 @@ fi;
 # Use vim as default editor
 export EDITOR=vim
 
+# Setup for autoenv
+if `which activate.sh`; then
+  source `which activate.sh`;
+fi;
+
 # Don't create Python *.pyc files or __pycache__
 export PYTHONDONTWRITEBYTECODE=1
 
@@ -48,6 +53,7 @@ alias python="python3"
 alias pip="pip3"
 alias ipaddr="lynx -dump http://www.whatismyip.org"
 alias dc="docker-compose"
+alias pr="pipenv run"
 alias pdflatex="pdflatex -interaction=batchmode"
 alias tmux-source="tmux source-file ~/.tmux.conf"
 alias swat="ssh onewman1@lab.cs.swarthmore.edu"
