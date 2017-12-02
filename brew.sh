@@ -57,5 +57,10 @@ brew install httpie
 brew install python
 brew install python3
 
+# Other
+brew install fzf
+brew install fish
+brew install node
+
 # Remove outdated versions from the cellar.
 brew cleanup
