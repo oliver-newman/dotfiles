@@ -135,8 +135,8 @@ autocmd FileType markdown set spell spelllang=en_us
 inoremap jk <Esc>
 
 " up and down moves go through wrapped lines, instead of skipping them
-nnoremap k gk
-nnoremap j gj
+map k gk
+map j gj
 
 " enable folding/unfolding with space
 nnoremap <space> za
