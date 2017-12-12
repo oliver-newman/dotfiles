@@ -10,8 +10,8 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 files="config/fisherman config/fish config/nvim config/thefuck config/omf macos
-       bashrc vimrc bash_profile vim tmux.conf gitignore_global tmux-macos
-       pylintrc ideavimrc cvimrc"
+       bashrc vimrc bash_profile vim tmux.conf gitconfig gitignore_global
+       tmux-macos pylintrc ideavimrc cvimrc"
 ##########
 
 # create dotfiles_old in homedir
