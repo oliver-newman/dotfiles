@@ -1,0 +1,103 @@
+{
+    //--------------------------------------------------------------------------
+    // General
+
+    "workbench.startupEditor": "newUntitledFile",
+
+    // Don't hide status bar when in zen mode (mainly in order to show vim
+    // searches).
+    "zenMode.hideStatusBar": false,
+
+    // Show rulers at 80 and 120 characters.
+    "editor.rulers": [80, 120],
+
+    // Hide annoying minimap in right margin.
+    "editor.minimap.enabled": false,
+
+    //--------------------------------------------------------------------------
+    // vim stuff
+
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    // TODO: this doesn't work in visual block mode
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        }
+    ],
+
+    //--------------------------------------------------------------------------
+    // Language-specific stuff
+
+    "[markdown]": {
+        "editor.rulers": [],
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
+    },
+
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    // Use "1.", "2.", etc. for ordered lists instead of all "1."s
+    "markdownlint.config": {
+        "MD029": {"style": "ordered"}
+    },
+
+    // Use the compiler specified by a `% !TEX program = <compiler>` line, if
+    // one exists in the file.
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+
+    // Don't spell-check some Latex stuff.
+    "cSpell.ignoreRegExpList": [
+        "\\\\\\w*(\\[.*?\\])?(\\{.*?\\})?",
+        "\\$.+?\\$"
+    ],
+
+    //--------------------------------------------------------------------------
+
+    // Spell-checking.
+    "cSpell.userWords": [
+        "Swarthmore",
+        "acyclic",
+        "bipartiteness",
+        "curr",
+        "nums",
+        "pipenv",
+        "pytest",
+        "toolchain"
+    ],
+
+    //--------------------------------------------------------------------------
+
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+    "vsicons.dontShowNewVersionMessage": true,
+    "vim.disableExtension": false,
+    "workbench.panel.location": "bottom"
+}

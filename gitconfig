@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Oliver Newman
+	email = oliver@whmsi.com
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/Oliver/.gitignore_global
+[alias]
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+	c = commit
+	a = add
+	s = status
+	co = checkout
+	unstage = reset HEAD --
+	last = log -1 HEAD
