@@ -1,4 +1,6 @@
 thefuck --alias | source
-set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+eval (pipenv --completion)
+set -g fish_user_paths $fish_user_paths "/usr/local/opt/icu4c/bin"
+set -g fish_user_paths $fish_user_paths "/usr/local/opt/icu4c/sbin"
+set BETTER_EXCEPTIONS
 status --is-interactive; and source (rbenv init -|psub)

@@ -90,3 +90,6 @@ annoy_me() {
 
 export PS1="\[\033[0;32m\]\u\[\033[0m\]:\[\033[0;36m\]\W\[\033[0m\]\$ "
 export PS2="more\[\033[0;36m\]>"
+
+# added by travis gem
+[ -f /Users/Oliver/.travis/travis.sh ] && source /Users/Oliver/.travis/travis.sh
