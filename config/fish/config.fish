@@ -1,6 +1,9 @@
-thefuck --alias | source
-eval (pipenv --completion)
-set -g fish_user_paths $fish_user_paths "/usr/local/opt/icu4c/bin"
-set -g fish_user_paths $fish_user_paths "/usr/local/opt/icu4c/sbin"
-set BETTER_EXCEPTIONS
-status --is-interactive; and source (rbenv init -|psub)
+eval (python -m virtualfish)
+
+set -g theme_display_git_untracked no
+set -gx LSCOLORS gxfxcxdxbxegedabagacad
+set -gx fish_color_autosuggestion '555'
+
+if status --is-login
+    export PYTHONDONTWRITEBYTECODE=1
+end
