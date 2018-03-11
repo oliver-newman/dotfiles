@@ -1,0 +1,1 @@
+/Users/Oliver/.config/fisherman/pyenv/functions/pyenv.fish

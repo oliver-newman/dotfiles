@@ -1,3 +1,4 @@
 package bang-bang
+package virtualfish
 theme bobthefish
 theme default
