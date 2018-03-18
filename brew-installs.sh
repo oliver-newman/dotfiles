@@ -59,6 +59,9 @@ brew install fzf
 brew install fish
 brew install node
 brew install ripgrep
+pip install pipenv
+pip install howdoi
+pip install thefuck
 
 brew tap homebrew/command-not-found
 
