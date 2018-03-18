@@ -9,3 +9,4 @@ if status --is-login
 end
 
 thefuck --alias | source
+brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-found-init)

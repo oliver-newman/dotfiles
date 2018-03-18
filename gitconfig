@@ -1,21 +1,22 @@
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
 [user]
 	name = Oliver Newman
 	email = oliver@whmsi.com
 [push]
 	default = simple
+[fetch]
+        prune = true
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/Oliver/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
+        branches = for-each-ref --sort=-committerdate --format=\"%(color:white)%(color:bold)%(refname:short)\t%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\" refs/remotes
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 	c = commit
+	cm = commit -m
 	a = add
 	s = status
 	co = checkout
 	unstage = reset HEAD --
 	last = log -1 HEAD
+
