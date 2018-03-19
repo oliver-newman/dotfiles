@@ -1,4 +1,6 @@
 *.swp
+.vscode
+.env
 .DS_Store
 *.synctex.gz
 __pycache__

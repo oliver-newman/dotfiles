@@ -1,3 +1,5 @@
+let defaultengine = "duckduckgo"
+
 set smoothscroll
 let scrollstep = 120
 let barposition = "bottom"
