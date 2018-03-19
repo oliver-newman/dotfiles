@@ -1,9 +1,6 @@
 # Expand aliases within here (and in all bash scripts)
 shopt -s expand_aliases
 
-# Check if dotfiles are out of date
-$HOME/dotfiles/check-dotfiles-modified.sh
-
 # Source external config files
 for file in ~/.{bash_aliases}; do
   if [[ -e "$file" ]] && [[ -f "$file" ]]; then # If file exists and is readable

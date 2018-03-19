@@ -20,15 +20,13 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
 brew install bash
 brew install bash-completion
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
+# Switch to using fish as default shell
+if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
+  echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/fish;
 fi;
 
 # Install `wget`
@@ -54,13 +52,18 @@ brew install git
 brew install rename
 brew install tree
 brew install httpie
-brew install python
-brew install python3
+brew install pyenv && pyenv install 3.6.4 && pyenv global 3.6.4
 
 # Other
 brew install fzf
 brew install fish
 brew install node
+brew install ripgrep
+pip install pipenv
+pip install howdoi
+pip install thefuck
+
+brew tap homebrew/command-not-found
 
 # Remove outdated versions from the cellar.
 brew cleanup
