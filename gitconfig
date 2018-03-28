@@ -1,7 +1,7 @@
 [user]
 	name = Oliver Newman
-	email = orn688@gmail.com
 	signingkey = B2B937CE758C7738
+	email = onewman@lvl5.ai
 [push]
 	default = simple
 [fetch]
