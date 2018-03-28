@@ -15,6 +15,7 @@ brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-fo
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 abbr dc 'docker-compose'
+abbr pr 'pipenv run'
 
 # git abbrevations
 abbr g git
