@@ -52,16 +52,20 @@ brew install git
 brew install rename
 brew install tree
 brew install httpie
+
+# Pyenv
 brew install pyenv && pyenv install 3.6.4 && pyenv global 3.6.4
+git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
 # Other
 brew install fzf
 brew install fish
 brew install node
 brew install ripgrep
-pip install pipenv
-pip install howdoi
-pip install thefuck
+brew install pipenv
+brew install howdoi
+brew install thefuck
+brew install autojump
 
 brew tap homebrew/command-not-found
 

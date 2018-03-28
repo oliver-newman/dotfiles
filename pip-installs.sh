@@ -1,1 +1,1 @@
-pip install virtualfish
+pip install --user virtualfish

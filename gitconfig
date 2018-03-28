@@ -1,6 +1,6 @@
 [user]
 	name = Oliver Newman
-	email = orn688@gmail.com
+        email = orn688@gmail.com
 [push]
 	default = simple
 [fetch]
@@ -10,14 +10,15 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
-	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
-        b = branch
-	c = commit
-	cm = commit -m
-	ca = commit --amend
 	a = add
-	s = status
+        b = branch
 	co = checkout
-	unstage = reset HEAD --
+	c = commit
+	ca = commit --amend
+	cm = commit -m
+        d = diff
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
+	s = status
+	unstage = reset HEAD --
