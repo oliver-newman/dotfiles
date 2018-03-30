@@ -27,6 +27,7 @@ brew install bash-completion
 if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/fish;
+  curl -L https://get.oh-my.fish | fish
 fi;
 
 # Install `wget`
@@ -54,7 +55,9 @@ brew install tree
 brew install httpie
 
 # Pyenv
-brew install pyenv && pyenv install 3.6.4 && pyenv global 3.6.4
+brew install pyenv
+pyenv install 3.6.4
+pyenv global 3.6.4
 git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
 # Other

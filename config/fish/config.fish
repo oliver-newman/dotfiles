@@ -1,17 +1,17 @@
 set PATH (pyenv root)/shims $PATH
 
-eval (python -m virtualfish)
-
 set -g theme_display_git_untracked no
 set -gx LSCOLORS gxfxcxdxbxegedabagacad
 set -gx fish_color_autosuggestion '555'
+set -gx PYTHONDONTWRITEBYTECODE 1
 
-if status --is-login
-    export PYTHONDONTWRITEBYTECODE=1
-end
-
+# thefuck alias
 thefuck --alias | source
+
+# Homebrew command-not-found
 brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-found-init)
+
+# Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 abbr dc 'docker-compose'
@@ -27,6 +27,7 @@ abbr gca 'git commit --amend'
 abbr gco 'git checkout'
 abbr gcom 'git checkout master'
 abbr gd 'git diff'
+abbr gl 'git log'
 abbr gpl 'git pull'
 abbr gps 'git push'
 abbr grm 'git rm'
