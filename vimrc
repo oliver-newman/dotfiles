@@ -2,6 +2,9 @@
 " vimrc
 " Author: Oliver Newman (with input from many, many sources)
 "-------------------------------------------------------------------------------
+" Vundle breaks in fish shell without this.
+set shell=/bin/bash
+
 " Plugin (vundle) stuff
 
 set nocompatible              " required
@@ -32,6 +35,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'valloric/youcompleteme'
 Plugin 'leafgarland/typescript-vim'
+Bundle 'dag/vim-fish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

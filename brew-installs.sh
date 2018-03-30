@@ -62,6 +62,7 @@ brew install fzf
 brew install fish
 brew install node
 brew install ripgrep
+brew install fd
 brew install pipenv
 brew install howdoi
 brew install thefuck

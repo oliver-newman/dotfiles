@@ -1,6 +1,6 @@
-eval (python -m virtualfish)
-
 set PATH (pyenv root)/shims $PATH
+
+eval (python -m virtualfish)
 
 set -g theme_display_git_untracked no
 set -gx LSCOLORS gxfxcxdxbxegedabagacad
@@ -28,6 +28,6 @@ abbr gco 'git checkout'
 abbr gcom 'git checkout master'
 abbr gd 'git diff'
 abbr gpl 'git pull'
-abbr gp 'git push'
+abbr gps 'git push'
 abbr grm 'git rm'
 abbr gs 'git status'
