@@ -14,7 +14,9 @@ brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-fo
 # Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
-abbr dc 'docker-compose'
+abbr c pbcopy
+abbr p pbpaste
+abbr dc docker-compose
 abbr pr 'pipenv run'
 
 # git abbrevations
@@ -34,6 +36,7 @@ abbr gps 'git push'
 abbr grm 'git rm'
 abbr grb 'git rebase'
 abbr gs 'git status'
+abbr gsh 'git stash'
 abbr gsha 'git stash apply'
 abbr gshd 'git stash drop'
 abbr gshp 'git stash pop'

@@ -50,7 +50,6 @@ brew install woff2
 # Install other useful binaries.
 brew install ack
 brew install git
-brew install rename
 brew install tree
 brew install httpie
 
