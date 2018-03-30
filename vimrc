@@ -138,6 +138,10 @@ inoremap jk <Esc>
 map k gk
 map j gj
 
+" use H and L for indenting/unindenting
+map H <<
+map L >>
+
 " enable folding/unfolding with space
 nnoremap <space> za
 
