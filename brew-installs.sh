@@ -69,6 +69,7 @@ brew install pipenv
 brew install howdoi
 brew install thefuck
 brew install autojump
+brew install jsonpp
 
 brew tap homebrew/command-not-found
 
