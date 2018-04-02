@@ -1,6 +1,7 @@
 set PATH (pyenv root)/shims $PATH
 
 set -g theme_nerd_fonts no  # nerd fonts look cheesy
+set -g theme_date_format '+%a %l:%M %p'
 set -g theme_display_git_master_branch yes
 set -g theme_display_git_untracked no
 set -gx LSCOLORS gxfxcxdxbxegedabagacad
