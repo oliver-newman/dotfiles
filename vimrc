@@ -159,6 +159,9 @@ set backspace=indent,eol,start
 " allow 'incrementing' of letters with Ctrl-I
 set nf=octal,hex,alpha
 
+" allow mouse scrolling (in *a*ll modes)
+set mouse=a
+
 "-------------------------------------------------------------------------------
 " EasyMotion
 
