@@ -3,3 +3,4 @@ vim/bundle/*
 *.swp
 config/fish/fishd.*
 config/fisherman/*
+config/fish/completions

@@ -5,10 +5,14 @@
 	default = simple
 [fetch]
         prune = true
+[diff]
+        irreversibleDelete = true
+        colorMoved = true
 [credential]
 	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore_global
+        editor = vim
 [alias]
 	a = add
         b = branch
@@ -16,9 +20,10 @@
 	c = commit
 	ca = commit --amend
 	cm = commit -m
-        d = diff
+        d = diff -D
 	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	s = status
 	unstage = reset HEAD --
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches

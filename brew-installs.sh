@@ -70,6 +70,7 @@ brew install howdoi
 brew install thefuck
 brew install autojump
 brew install jsonpp
+brew install git-open
 
 brew tap homebrew/command-not-found
 
