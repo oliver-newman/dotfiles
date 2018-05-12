@@ -24,13 +24,13 @@ brew install bash
 brew install bash-completion
 
 # Switch to using fish as default shell
-if ! fgrep -q '/usr/local/bin/fish' /etc/shells; then
+brew install fish
+if ! grep -F -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/fish;
   curl -L https://get.oh-my.fish | fish
 fi;
 
-# Install `wget`
 brew install wget
 
 # Install GnuPG to enable PGP-signing commits.
@@ -49,29 +49,32 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
-brew install git
 brew install tree
 brew install httpie
 
 # Pyenv
 brew install pyenv
-pyenv install 3.6.4
-pyenv global 3.6.4
+pyenv install 3.6.5
+pyenv global 3.6.5
 git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
 
-# Other
-brew install fzf
-brew install fish
-brew install node
+# Pipenv
+brew install pipenv
+
+# Shell script linting
+brew install shellcheck
+
+# Useful alternatives to Unix builtins
 brew install ripgrep
 brew install fd
-brew install pipenv
+
+# Fun stuff
 brew install howdoi
 brew install thefuck
 brew install autojump
-brew install jsonpp
 brew install git-open
 
+# If a command isn't found but can be downloaded via Homebrew, let me know
 brew tap homebrew/command-not-found
 
 # Remove outdated versions from the cellar.
