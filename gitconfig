@@ -5,6 +5,8 @@
 	default = simple
 [fetch]
         prune = true
+[merge]
+        ff = false
 [diff]
         irreversibleDelete = true
         colorMoved = true
