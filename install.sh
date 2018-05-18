@@ -73,6 +73,7 @@ brew install howdoi
 brew install thefuck
 brew install autojump
 brew install git-open
+brew install emojify
 
 # If a command isn't found but can be downloaded via Homebrew, let me know
 brew tap homebrew/command-not-found

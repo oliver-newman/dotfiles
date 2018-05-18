@@ -3,6 +3,9 @@ abbr p pbpaste
 abbr dc docker-compose
 abbr pr 'pipenv run'
 abbr prp 'pipenv run python'
+abbr em emojify
+
+abbr kc kubectl
 
 # git abbrevations
 abbr g git
