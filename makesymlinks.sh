@@ -21,7 +21,7 @@ echo "done"
 
 # change to the dotfiles directory
 echo -n "Changing to the $dir directory ..."
-cd $dir
+cd $dir || exit
 echo "done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create 

@@ -51,6 +51,7 @@ brew install woff2
 brew install ack
 brew install tree
 brew install httpie
+brew install jq
 
 # Pyenv
 brew install pyenv

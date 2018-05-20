@@ -18,4 +18,7 @@ brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-fo
 # Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
+# Pyenv
+status --is-interactive; and command -s pyenv > /dev/null; and source (pyenv init -|psub)
+
 source ~/.config/fish/aliases.fish
