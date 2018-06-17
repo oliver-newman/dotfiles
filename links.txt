@@ -1,0 +1,17 @@
+config/fisherman
+config/fish
+config/nvim
+config/thefuck
+config/omf
+macos
+bashrc
+vimrc
+bash_profile
+vim
+tmux.conf
+gitconfig
+gitignore_global
+tmux-macos
+pylintrc
+ideavimrc
+cvimrc
