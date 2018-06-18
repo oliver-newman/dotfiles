@@ -7,3 +7,5 @@ config/fish/completions
 config/fish/functions
 *.log
 .DS_Store
+__pycache__/
+*.py[cod]
