@@ -107,6 +107,15 @@ highlight colorcolumn ctermbg=235 guibg=#2c2d27
 " highlight all columns of lines beyond 80 characters
 let &colorcolumn = "81,".join(range(81,81),",")
 
+" highlight trailing whitespace in red when not in insert mode
+" source: http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 "-------------------------------------------------------------------------------
 " Behavior
 
