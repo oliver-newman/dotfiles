@@ -79,5 +79,9 @@ brew install emojify
 # If a command isn't found but can be downloaded via Homebrew, let me know
 brew tap homebrew/command-not-found
 
+# iTerm2
+brew cask install iterm2
+defaults write com.googlecode.iterm2 PinchToChangeFontSizeDisabled -bool true
+
 # Remove outdated versions from the cellar.
 brew cleanup
