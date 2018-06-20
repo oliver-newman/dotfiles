@@ -24,4 +24,5 @@ if status --is-login
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
   set -gx fish_color_autosuggestion '555'
   export PYTHONDONTWRITEBYTECODE=1
+  export EDITOR=vim
 end
