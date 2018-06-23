@@ -60,7 +60,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>-1509 603 796 473 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>100 263 650 427 0 0 1680 1050 </string>
+	<string>-1500 615 650 427 -1920 176 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -282,7 +282,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>tmux attach; or tmux new</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -308,7 +308,7 @@
 				<real>1</real>
 			</dict>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -772,7 +772,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-15T02:11:10Z</date>
+	<date>2018-06-22T15:51:36Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
