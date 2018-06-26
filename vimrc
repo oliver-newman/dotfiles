@@ -125,13 +125,7 @@ set clipboard=unnamed
 " use indents of 2 spaces, and have them copied down lines:
 set shiftwidth=2
 
-" Rich and PEP 8 say 4 spaces....uncomment this is you want 4 spaces
-set shiftround
-set expandtab
-set autoindent
-
 " makes searches case-insensitive, unless they contain upper-case letters
-set ignorecase
 set smartcase
 
 " spell-checking for .md files

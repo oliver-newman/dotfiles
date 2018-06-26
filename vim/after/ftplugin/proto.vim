@@ -1,4 +1,4 @@
-au BufNewFile,BufRead *.py set
+au BufNewFile,BufRead *.proto set
   \ tabstop=4
   \ softtabstop=4
   \ shiftwidth=4
