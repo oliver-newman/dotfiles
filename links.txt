@@ -15,3 +15,4 @@ tmux-macos
 pylintrc
 ideavimrc
 cvimrc
+xvimrc

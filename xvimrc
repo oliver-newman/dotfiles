@@ -1,0 +1,24 @@
+"-------------------------------------------------------------------------------
+" xvimrc
+" Author: Oliver Newman
+"-------------------------------------------------------------------------------
+" Behavior
+
+" automatically copy to system clipboard
+set clipboard=unnamed
+
+" use indents of 2 spaces, and have them copied down lines:
+set shiftwidth=2
+
+" makes searches case-insensitive, unless they contain upper-case letters
+set smartcase
+
+"-------------------------------------------------------------------------------
+" Keyboard stuff
+
+" let jk exit from insert mode
+inoremap jk <Esc>
+
+" use H and L for indenting/unindenting
+map H <<
+map L >>
