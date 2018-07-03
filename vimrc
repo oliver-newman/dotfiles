@@ -33,7 +33,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'leafgarland/typescript-vim'
 Bundle 'dag/vim-fish'
 

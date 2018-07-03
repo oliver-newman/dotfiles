@@ -57,3 +57,9 @@ end
 function src -d 'Source the fish config file'
   source ~/.config/fish/config.fish
 end
+
+# Installing Homebrew packages that depend on Python can go wrong if using a
+# Pyenv-installed Python.
+function brew -d 'Run Homebrew while using the system Python'
+  env PYENV_VERSION=system brew $argv
+end
