@@ -35,7 +35,9 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'leafgarland/typescript-vim'
-Bundle 'dag/vim-fish'
+Plugin 'dag/vim-fish'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,7 +96,7 @@ set showmode
 set showcmd
 
 " colorscheme
-set term=screen-256color
+set t_Co=256  " Note: Neovim ignores t_Co and other terminal codes.
 syntax on
 colorscheme umber-green
 

@@ -38,6 +38,7 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
+brew install nvim
 brew install grep
 brew install openssh
 brew install tmux
@@ -85,3 +86,7 @@ defaults write com.googlecode.iterm2 PinchToChangeFontSizeDisabled -bool true
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Neovim support
+pip install --user neovim
+k

@@ -7,6 +7,7 @@ abbr em emojify
 abbr vi vim
 
 abbr kc kubectl
+abbr vim nvim
 
 # git abbrevations
 abbr g git
