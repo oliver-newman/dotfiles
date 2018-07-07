@@ -57,8 +57,9 @@ brew install jq
 # Pyenv
 brew install pyenv
 pyenv install 3.6.5
-pyenv global 3.6.5
-git clone git://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
+pyenv install 3.7.0
+pyenv global 3.7.0
+brew install pyenv-virtualenv
 
 # Pipenv
 brew install pipenv
@@ -84,9 +85,13 @@ brew tap homebrew/command-not-found
 brew cask install iterm2
 defaults write com.googlecode.iterm2 PinchToChangeFontSizeDisabled -bool true
 
+# Neovim support
+brew install neovim
+pyenv virtualenv 3.6.5 neovim-python3
+pyenv activate neovim-python3
+pip install --upgrade pip
+pip install neovim
+pyenv deactivate
+
 # Remove outdated versions from the cellar.
 brew cleanup
-
-# Neovim support
-pip install --user neovim
-k

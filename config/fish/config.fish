@@ -1,4 +1,5 @@
-set PATH (pyenv root)/shims $PATH
+set -gx PYENV_ROOT $HOME/.pyenv
+set -g PATH $PYENV_ROOT/shims $PATH
 
 set -g theme_nerd_fonts no  # nerd fonts look cheesy
 set -g theme_date_format '+%a %l:%M:%S %p'
@@ -23,6 +24,10 @@ source ~/.config/fish/aliases.fish
 if status --is-login
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
   set -gx fish_color_autosuggestion '555'
-  export PYTHONDONTWRITEBYTECODE=1
-  export EDITOR=vim
+  set -gx PYTHONDONTWRITEBYTECODE 1
+  if command -s nvim > /dev/null
+    set -gx EDITOR nvim
+  else
+    set -gx EDITOR vim
+  end
 end

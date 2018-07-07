@@ -33,10 +33,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'dag/vim-fish'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
@@ -54,17 +54,6 @@ let g:syntastic_cpp_checkers = []
 " syntastic shortcuts
 cabbrev sr SyntasticReset
 cabbrev pl SyntasticCheck pylint
-
-" Python version switching for syntastic
-function Py2()
-  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
-endfunction
-
-function Py3()
-  let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
-endfunction
-
-call Py3() " default to Python 3
 
 " automatically close ycm function preview window after leaving insert mode
 let g:ycm_autoclose_preview_window_after_insertion = 1
