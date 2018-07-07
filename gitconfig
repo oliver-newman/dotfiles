@@ -5,6 +5,8 @@
 	default = simple
 [fetch]
         prune = true
+[pull]
+	rebase = true
 [merge]
         ff = false
 [diff]
