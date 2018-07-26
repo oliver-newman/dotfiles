@@ -57,10 +57,14 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 110 445 103 0 0 1440 900 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>-1270 692 620 392 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1509 564 918 512 -1920 176 1920 1057 </string>
+	<string>-1509 564 796 473 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1659 479 650 427 -1920 176 1920 1080 </string>
+	<string>261 303 650 427 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>10 283 650 427 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -728,6 +732,8 @@
 	<real>550173680.40206301</real>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>2</integer>
+	<key>PinchToChangeFontSizeDisabled</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -772,7 +778,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-26T01:09:45Z</date>
+	<date>2018-07-20T22:26:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
@@ -780,7 +786,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

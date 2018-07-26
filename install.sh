@@ -23,15 +23,18 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew install bash-completion
 
+brew install wget
+
 # Switch to using fish as default shell
 brew install fish
 if ! grep -F -q '/usr/local/bin/fish' /etc/shells; then
   echo '/usr/local/bin/fish' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/fish;
-  curl -L https://get.oh-my.fish | fish
 fi;
 
-brew install wget
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+fisher oh-my-fish/theme-bobthefish
+fisher fnm
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
@@ -53,6 +56,7 @@ brew install ack
 brew install tree
 brew install httpie
 brew install jq
+brew install rename
 
 # Pyenv
 brew install pyenv

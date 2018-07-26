@@ -6,3 +6,4 @@ au BufNewFile,BufRead *.py set
   \ expandtab
   \ autoindent
   \ fileformat=unix
+setlocal omnifunc=jedi#completions

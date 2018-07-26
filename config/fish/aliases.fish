@@ -5,6 +5,7 @@ abbr pr 'pipenv run'
 abbr prp 'pipenv run python'
 abbr em emojify
 abbr vi vim
+abbr nvm fnm
 
 abbr kc kubectl
 abbr vim nvim
@@ -61,8 +62,33 @@ function src -d 'Source the fish config file'
   source ~/.config/fish/config.fish
 end
 
+function did -d 'Read/write ~/did.md'
+  set didfile ~/did.md
+  if not test -e $didfile
+    touch $didfile
+  end
+
+  set today (date '+%a, %d %B %Y')
+  if not rg $today $didfile > /dev/null
+    echo "## $today" >> $didfile
+  end
+
+  if [ (count $argv) != '0' ]
+    echo "- $argv" >> $didfile
+    set bold (tput bold)
+    set notbold (tput sgr0)
+    echo "$bold""done:$notbold $argv"
+  else
+    nvim $didfile; or vim $didfile
+  end
+end
+
 # Installing Homebrew packages that depend on Python can go wrong if using a
 # Pyenv-installed Python.
 function brew -d 'Run Homebrew while using the system Python'
   env PYENV_VERSION=system brew $argv
+end
+
+function az -d 'Run Azure CLI commands using the system Python'
+  env PYENV_VERSION=system az $argv
 end
