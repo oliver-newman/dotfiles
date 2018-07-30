@@ -60,9 +60,8 @@ brew install rename
 
 # Pyenv
 brew install pyenv
-pyenv install 3.6.5
-pyenv install 3.7.0
-pyenv global 3.7.0
+pyenv install $PYTHON_VERSION
+pyenv global $PYTHON_VERSION
 brew install pyenv-virtualenv
 
 # Pipenv
@@ -96,6 +95,9 @@ pyenv activate neovim-python3
 pip install --upgrade pip
 pip install neovim
 pyenv deactivate
+
+# ipython
+brew install ipython
 
 # Remove outdated versions from the cellar.
 brew cleanup

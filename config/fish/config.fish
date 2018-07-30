@@ -17,7 +17,10 @@ brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-fo
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # Pyenv
+set -gx PYTHON_VERSION 3.7.0
+
 status --is-interactive; and command -s pyenv > /dev/null; and source (pyenv init -|psub)
+pyenv global $PYTHON_VERSION
 
 source ~/.config/fish/aliases.fish
 
