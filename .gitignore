@@ -5,7 +5,9 @@ config/fish/fishd.*
 config/fisherman/*
 config/fish/completions
 config/fish/functions
+config/fish/conf.d/*
 *.log
 .DS_Store
 __pycache__/
 *.py[cod]
+.netrwhist
