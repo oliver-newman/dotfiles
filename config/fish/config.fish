@@ -1,5 +1,5 @@
 set -gx PYENV_ROOT $HOME/.pyenv
-set -g PATH $PYENV_ROOT/shims $PATH
+set -g PATH $PYENV_ROOT/shims /usr/local/opt/openssl/bin $PATH
 
 set -g theme_nerd_fonts no  # nerd fonts look cheesy
 set -g theme_date_format '+%a %l:%M:%S %p'
@@ -28,6 +28,7 @@ if status --is-login
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
   set -gx fish_color_autosuggestion '555'
   set -gx PYTHONDONTWRITEBYTECODE 1
+  set -gx PIPENV_SHELL_FANCY 1
   if command -s nvim > /dev/null
     set -gx EDITOR nvim
   else
