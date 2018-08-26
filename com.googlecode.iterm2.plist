@@ -56,13 +56,13 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>929 110 445 103 0 0 1440 900 </string>
+	<string>-543 209 445 77 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>-1270 692 620 392 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1509 564 796 473 -1920 176 1920 1080 </string>
+	<string>-1315 606 918 394 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>261 303 650 427 0 0 1440 900 </string>
+	<string>-1659 479 650 425 -1920 176 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>10 283 650 427 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
@@ -769,6 +769,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/onewman/dotfiles</string>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -778,15 +780,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-20T22:26:32Z</date>
+	<date>2018-08-08T05:15:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>TerminalMargin</key>
+	<integer>1</integer>
+	<key>TerminalVMargin</key>
+	<integer>1</integer>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.7</string>
+	<string>3.2.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
