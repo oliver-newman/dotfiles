@@ -17,7 +17,7 @@
 	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore_global
-        editor = vim
+        editor = nvim
 [rerere]
 	enabled = true
 [alias]

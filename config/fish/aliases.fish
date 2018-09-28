@@ -4,10 +4,10 @@ abbr dc docker-compose
 abbr pr 'pipenv run'
 abbr prp 'pipenv run python'
 abbr em emojify
-abbr vi vim
 abbr nvm fnm
-
+abbr m make
 abbr kc kubectl
+abbr vi nvim
 abbr vim nvim
 
 # git abbrevations
@@ -29,7 +29,7 @@ abbr gpl 'git pull'
 abbr gps 'git push'
 abbr gpsf 'git push -f'
 abbr gpsn 'git push --no-verify'
-abbr gpsnf 'git push -f --no-verify'
+abbr gpss 'git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)'
 abbr grm 'git rm'
 abbr grb 'git rebase'
 abbr gs 'git status'
