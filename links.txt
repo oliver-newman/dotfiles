@@ -3,6 +3,7 @@ config/fish
 config/nvim
 config/thefuck
 config/omf
+config/karabiner
 macos
 bashrc
 vimrc
