@@ -14,9 +14,6 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
@@ -38,6 +35,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'dag/vim-fish'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
+Plugin 'ambv/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -125,6 +123,9 @@ autocmd FileType markdown set spell spelllang=en_us
 "-------------------------------------------------------------------------------
 " Keyboard stuff
 
+" Alt-f -> Format Python code
+nmap ƒ :Black<CR>
+
 " let jk exit from insert mode
 inoremap jk <Esc>
 
@@ -133,8 +134,8 @@ map k gk
 map j gj
 
 " use H and L for indenting/unindenting
-map H <<
-map L >>
+map H <<<Esc>
+map L >><Esc>
 
 " enable folding/unfolding with space
 nnoremap <space> za
