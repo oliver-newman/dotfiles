@@ -1,14 +1,19 @@
 abbr c pbcopy
 abbr p pbpaste
+abbr tm tmux
 abbr dc docker-compose
 abbr pr 'pipenv run'
 abbr prp 'pipenv run python'
+abbr be 'bundle exec'
 abbr em emojify
 abbr nvm fnm
 abbr m make
 abbr kc kubectl
-abbr vi nvim
 abbr vim nvim
+abbr cn 'code -n .'
+abbr ans ansible
+abbr anspb ansible-playbook
+abbr ts trash
 
 # git abbrevations
 abbr g git
@@ -32,6 +37,8 @@ abbr gpsn 'git push --no-verify'
 abbr gpss 'git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)'
 abbr grm 'git rm'
 abbr grb 'git rebase'
+abbr grbc 'git rebase --continue'
+abbr grba 'git rebase --abort'
 abbr gs 'git status'
 abbr gsh 'git stash'
 abbr gsha 'git stash apply'
@@ -39,6 +46,7 @@ abbr gshd 'git stash drop'
 abbr gshp 'git stash pop'
 abbr gshs 'git stash save'
 abbr gshl 'git stash list'
+abbr gu 'git unstage'
 
 function battery -d 'Print battery percent and time remaining'
   pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d';'
@@ -94,4 +102,8 @@ end
 
 function az -d 'Run Azure CLI commands using the system Python'
   env PYENV_VERSION=system az $argv
+end
+
+function add
+  paste -sd+ - | bc
 end

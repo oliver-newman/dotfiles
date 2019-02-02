@@ -20,6 +20,8 @@
         editor = nvim
 [rerere]
 	enabled = true
+[branch]
+	sort = -committerdate
 [alias]
 	a = add
         b = branch
@@ -28,9 +30,13 @@
 	ca = commit --amend
 	cm = commit -m
         d = diff -D
-	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+	graph = log --graph --date=local --abbrev-commit --branches \
+	  --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset%n'
 	last = log -1 HEAD
 	root = rev-parse --show-toplevel
 	s = status
 	unstage = reset HEAD --
+	untracked = "!git status --short --untracked-files | cut -d ' ' -f 2-"
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+[color]
+	ui = auto

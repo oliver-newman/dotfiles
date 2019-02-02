@@ -7,6 +7,8 @@ set -g theme_display_git_master_branch yes
 set -g theme_display_git_untracked no
 set -g theme_display_k8s_context no
 
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+
 # thefuck alias
 thefuck --alias | source
 
@@ -17,11 +19,15 @@ brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-fo
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # Pyenv
-set -gx PYTHON_VERSION 3.7.0
+set -gx PYTHON_VERSION 3.7.1
+
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
 
 status --is-interactive; and command -s pyenv > /dev/null; and source (pyenv init -|psub)
 pyenv global $PYTHON_VERSION
 
+source ~/.poetry/env
 source ~/.config/fish/aliases.fish
 
 if status --is-login
