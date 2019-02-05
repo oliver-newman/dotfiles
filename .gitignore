@@ -5,6 +5,7 @@ config/fish/fishd.*
 config/fisherman/*
 config/fish/completions
 config/fish/functions
+config/fish/fish_variables
 config/fish/conf.d/*
 *.log
 .DS_Store
