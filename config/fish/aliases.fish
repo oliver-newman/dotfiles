@@ -94,6 +94,10 @@ function did -d 'Read/write ~/did.md'
   end
 end
 
+function add_to_path --description 'Persistently prepend paths to $PATH'
+  set --universal fish_user_paths $fish_user_paths $argv
+end
+
 # Installing Homebrew packages that depend on Python can go wrong if using a
 # Pyenv-installed Python.
 function brew -d 'Run Homebrew while using the system Python'
@@ -106,4 +110,8 @@ end
 
 function add
   paste -sd+ - | bc
+end
+
+function git --wraps hub --description 'Alias for hub, which wraps git to provide extra functionality with GitHub.'
+    hub $argv
 end

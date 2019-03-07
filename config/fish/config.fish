@@ -1,5 +1,4 @@
 set -gx PYENV_ROOT $HOME/.pyenv
-set -g PATH $PYENV_ROOT/shims /usr/local/opt/openssl/bin $PATH
 
 set -g theme_nerd_fonts no  # nerd fonts look cheesy
 set -g theme_date_format '+%a %l:%M:%S %p'
@@ -27,7 +26,6 @@ status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and command -s pyenv > /dev/null; and source (pyenv init -|psub)
 pyenv global $PYTHON_VERSION
 
-source ~/.poetry/env
 source ~/.config/fish/aliases.fish
 
 if status --is-login

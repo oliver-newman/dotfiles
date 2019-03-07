@@ -38,10 +38,13 @@ Plugin 'ervandew/supertab'
 Plugin 'ambv/black'
 Plugin 'chr4/nginx.vim'
 Plugin 'keith/swift.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+"-------------------------------------------------------------------------------
 
 " syntax highlighting for code snippet in markdown
 let g:markdown_fenced_languages = ['java', 'c', 'html', 'python', 'bash=sh']
