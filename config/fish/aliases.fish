@@ -14,6 +14,7 @@ abbr cn 'code -n .'
 abbr ans ansible
 abbr anspb ansible-playbook
 abbr ts trash
+abbr we withenv
 
 # git abbrevations
 abbr g git
@@ -45,8 +46,9 @@ abbr gsha 'git stash apply'
 abbr gshd 'git stash drop'
 abbr gshp 'git stash pop'
 abbr gshs 'git stash save'
-abbr gshl 'git stash list'
+abbr gshl 'git sl'
 abbr gu 'git unstage'
+abbr gwt 'git worktree'
 
 function battery -d 'Print battery percent and time remaining'
   pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d';'
@@ -113,5 +115,18 @@ function add
 end
 
 function git --wraps hub --description 'Alias for hub, which wraps git to provide extra functionality with GitHub.'
-    hub $argv
+  hub $argv
+end
+
+function psource -d 'Source a posix-formatted .env file'
+  for i in (cat $argv)
+    set arr (echo $i |tr = \n)
+    set -gx $arr[1] $arr[2]
+  end
+end
+
+function withenv -d 'Run the command a subshell with a .env file sourced'
+  set env_file $argv[1]
+  set cmd $argv[2..-1]
+  fish -c "psource $env_file; and $cmd"
 end
