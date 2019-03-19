@@ -119,8 +119,9 @@ function git --wraps hub --description 'Alias for hub, which wraps git to provid
 end
 
 function psource -d 'Source a posix-formatted .env file'
-  for i in (cat $argv)
-    set arr (echo $i |tr = \n)
+  for line in (cat $argv)
+    set assignment (string replace 'export ' '' $line)
+    set arr (echo $assignment | tr = \n)
     set -gx $arr[1] $arr[2]
   end
 end
