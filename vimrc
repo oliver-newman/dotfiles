@@ -40,11 +40,24 @@ Plugin 'chr4/nginx.vim'
 Plugin 'keith/swift.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'fatih/vim-go'
+Plugin 'w0rp/ale'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 "-------------------------------------------------------------------------------
+let g:pumheight = 10
+
+let g:ale_completion_enabled = 1
+let g:ale_open_list = 1
+let g:ale_completion_enabled = 1
+let g:ale_keep_list_window_open = 0
+let g:ale_list_window_size = 5
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+au FileType fish let b:ale_linters = []
 
 " syntax highlighting for code snippet in markdown
 let g:markdown_fenced_languages = ['java', 'c', 'html', 'python', 'bash=sh']
@@ -54,12 +67,24 @@ let g:syntastic_python_checkers = ['python']
 let g:syntastic_c_checkers = []
 let g:syntastic_cpp_checkers = []
 
-" syntastic shortcuts
-cabbrev sr SyntasticReset
-cabbrev pl SyntasticCheck pylint
+" Golang config
+au FileType go set noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 
-" automatically close ycm function preview window after leaving insert mode
-let g:ycm_autoclose_preview_window_after_insertion = 1
+" Alt-f -> Format code
+au FileType python nmap ƒ :Black<CR>
+au FileType go nmap ƒ :GoFmt<CR>
+
+"-------------------------------------------------------------------------------
+
+nmap gd :ALEGoToDefinition
 
 " disable annoying warning in erb files
 let g:syntastic_eruby_ruby_quiet_messages =
@@ -127,9 +152,6 @@ autocmd FileType markdown set spell spelllang=en_us
 
 "-------------------------------------------------------------------------------
 " Keyboard stuff
-
-" Alt-f -> Format Python code
-nmap ƒ :Black<CR>
 
 " let jk exit from insert mode
 inoremap jk <Esc>

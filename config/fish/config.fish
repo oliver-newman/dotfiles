@@ -8,21 +8,23 @@ set -g theme_display_k8s_context no
 
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 
-# thefuck alias
-thefuck --alias | source
-
-# Homebrew command-not-found
-brew command command-not-found-init > /dev/null 2>&1; and . (brew command-not-found-init)
-
 # Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
+# Pyenv
 status --is-interactive; and command -s pyenv > /dev/null; and source (pyenv init -|psub)
+set -gx PYTHON_VERSION 3.7.1
+
+# Go
+set -x GOPATH $HOME/go
+set -x GOROOT /usr/local/opt/go/libexec
+
 pyenv global $PYTHON_VERSION
 # Pyenv
 set -gx PYTHON_VERSION 3.7.2
 
 source ~/.config/fish/aliases.fish
+direnv hook fish | source
 
 if status --is-login
   set -gx LSCOLORS gxfxcxdxbxegedabagacad
